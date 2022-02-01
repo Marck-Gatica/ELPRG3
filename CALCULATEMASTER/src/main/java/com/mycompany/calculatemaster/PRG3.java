@@ -127,6 +127,11 @@ public class PRG3 extends javax.swing.JFrame {
         jButton11.setText("/");
 
         jButton12.setText("x");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         jButton13.setText("-");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
@@ -338,6 +343,7 @@ public class PRG3 extends javax.swing.JFrame {
             break;
             case "-":this.pt.setText(Float.toString(this.n1-this.n2));
             
+            
         }
     }//GEN-LAST:event_jButton16ActionPerformed
 
@@ -348,9 +354,18 @@ public class PRG3 extends javax.swing.JFrame {
         this.pt.setText("");
     }//GEN-LAST:event_jButton13ActionPerformed
 
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+        this.n1=Float.parseFloat(this.pt.getText());
+        this.op="*";
+        this.pt.setText("");
+        
+    }//GEN-LAST:event_jButton12ActionPerformed
+
     /**
      * @param args the command line arguments
      */
+    //a
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
