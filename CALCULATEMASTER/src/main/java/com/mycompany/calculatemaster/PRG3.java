@@ -9,10 +9,12 @@ package com.mycompany.calculatemaster;
  * @author Familia Gatica
  */
 public class PRG3 extends javax.swing.JFrame {
-
-    /**
-     * Creates new form PRG3
-     */
+    
+    public float n1;
+    public float n2;
+    public String op;
+            
+            
     public PRG3() {
         initComponents();
     }
@@ -129,6 +131,11 @@ public class PRG3 extends javax.swing.JFrame {
         jButton13.setText("-");
 
         jButton14.setText("+");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
 
         jButton15.setText(".");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
@@ -138,6 +145,11 @@ public class PRG3 extends javax.swing.JFrame {
         });
 
         jButton16.setText("=");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
 
         jButton17.setText("Log");
 
@@ -303,6 +315,23 @@ public class PRG3 extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.pt.setText("");
     }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+        this.n1=Float.parseFloat(this.pt.getText());
+        this.op="+";
+        this.pt.setText("");
+        
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+        this.n2=Float.parseFloat(this.pt.getText());
+        
+        switch(this.op){
+            case "+":this.pt.setText(Float.toString(this.n1+this.n2));
+        }
+    }//GEN-LAST:event_jButton16ActionPerformed
 
     /**
      * @param args the command line arguments
