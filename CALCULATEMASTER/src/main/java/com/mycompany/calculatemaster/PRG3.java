@@ -323,7 +323,9 @@ public class PRG3 extends javax.swing.JFrame {
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
+        if(!(this.pt.getText().contains("."))){
         this.pt.setText(this.pt.getText()+".");
+        }
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
