@@ -347,6 +347,11 @@ public class PRG3 extends javax.swing.JFrame {
             case "+":this.pt.setText(Float.toString(this.n1+this.n2));
             break;
             case "-":this.pt.setText(Float.toString(this.n1-this.n2));
+            break;
+            case "*":this.pt.setText(Float.toString(this.n1*this.n2));
+            break;
+            case "/":this.pt.setText(Float.toString(this.n1/this.n2));
+            break;
             
             
         }
