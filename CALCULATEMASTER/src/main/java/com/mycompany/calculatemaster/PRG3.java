@@ -129,6 +129,11 @@ public class PRG3 extends javax.swing.JFrame {
         jButton12.setText("x");
 
         jButton13.setText("-");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
 
         jButton14.setText("+");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
@@ -330,8 +335,18 @@ public class PRG3 extends javax.swing.JFrame {
         
         switch(this.op){
             case "+":this.pt.setText(Float.toString(this.n1+this.n2));
+            break;
+            case "-":this.pt.setText(Float.toString(this.n1-this.n2));
+            
         }
     }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+         this.n1=Float.parseFloat(this.pt.getText());
+        this.op="-";
+        this.pt.setText("");
+    }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
      * @param args the command line arguments
