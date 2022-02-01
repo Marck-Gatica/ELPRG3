@@ -125,6 +125,11 @@ public class PRG3 extends javax.swing.JFrame {
         });
 
         jButton11.setText("/");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jButton12.setText("x");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -361,6 +366,13 @@ public class PRG3 extends javax.swing.JFrame {
         this.pt.setText("");
         
     }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        this.n1=Float.parseFloat(this.pt.getText());
+        this.op="/";
+        this.pt.setText("");
+    }//GEN-LAST:event_jButton11ActionPerformed
 
     /**
      * @param args the command line arguments
